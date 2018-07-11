@@ -1,4 +1,5 @@
 
+console.log(navigator.language, navigator.languages)
 
 const default_lang = 'en'
 
