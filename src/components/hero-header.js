@@ -22,8 +22,8 @@ const cta_style = t_a_center.add({
 }).style()
 
 const version_text = pick({
-  fr:<span>version 7 Gentle Gorilla</span>,
-  en:<span>version 7 Gentle Gorilla</span>
+  fr:<span>version 8 Hipster Hippo</span>,
+  en:<span>version 8 Hipster Hippo</span>
 })
 
 const changelog_text = pick({

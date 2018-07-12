@@ -66,6 +66,30 @@ const settings = {
   prevArrow: <SamplePrevArrow />,
 };
 
+const v8_desc_fr = (
+  <span>
+    Préparez-vous à faire chauffer vos arborescences, car cette nouvelle version va vous permettre d'être encore plus efficaces !<br /><br />
+    <b>Manipuler les tags</b> devient on ne peut plus aisé : dans le volet "tous les tags", cliquez sur le "+" à côté d'un tag pour l'ajouter 
+    au dossier ou fichier actif. Cliquez sur le "x" pour l'enlever. Cliquez sur la poubelle pour supprimer complètement le tag. Cliquez enfin 
+    sur le tag lui-même pour le renommer !<br /><br />
+    Amélioration supplémentaire : une <b>barre de progression</b> apparaît désormais derrière un tag pour indiquer quel volume de votre arborescence 
+    vous avez tagué avec celui-ci.<br /><br />
+    Ne soyez plus jamais perdus avec la <b>fonctionnalité zoom</b> ! Elle est maintenant animée pour mieux indiquer ce qui se passe quand vous 
+    double-cliquez sur un rectangle. Et en plus, une mini-carte vous permet de toujours savoir où vous vous situez !
+  </span>
+);
+
+const v8_desc_en = (
+  <span>
+    Get ready to shake up those file trees, for this new update is about to boost your efficiency!<br /><br />
+    <b>Handling tags</b> can hardly get any easier: in the "all tags" pane, click the "+" next to a tag to add it to the active file or folder. 
+    Click the "x" to remove it. Click the trash can to delete the tag entirely. Finally, click the tag itself to rename it.<br /><br />
+    Here's another improvement: a <b>progress bar</b> now appears behind a tag, and indicates how much volume of your file tree you've used this tag on.<br /><br />
+    Never get lost again with the <b>zoom feature</b>! It's now animated, to better display what happens when you double-click a rectangle. Also, 
+    you've got a mini-map that always shows you where you are!
+  </span>
+);
+
 const v7_desc_fr = (
   <span>
     Toujours plus vite, toujours plus loin, toujours plus pratique ! Archifiltre s'offre une mise à jour sur le pouce, centrée sur une chose et une 
@@ -237,7 +261,7 @@ const v1_desc_fr = (
 );
 
 const v1_desc_en = (
-<span>Archifiltre's first version is now live! Visualize a file tree at a signle glance!</span>
+<span>Archifiltre's first version is now live! Visualize a file tree at a single glance!</span>
 );
 
 export default function(props) {
@@ -247,6 +271,21 @@ export default function(props) {
         <div className='cell small-12 medium-12' style={cell_style}>
           <h3 style={title_style}>{title_text}</h3>
           <Slider {...settings}>
+            <LogCell
+            version={pick({
+              fr: "v8 Hipster Hippo",
+              en: "v8 Hipster Hippo"
+            })}
+            date={pick({
+              fr: "13 juillet 2018",
+              en: "July 13 2018"
+            })}
+            content={pick({
+              fr: v8_desc_fr,
+              en: v8_desc_en
+            })}
+            isCurrent={true}
+            />
             <LogCell
             version={pick({
               fr: "v7 Gentle Gorilla",
@@ -260,7 +299,7 @@ export default function(props) {
               fr: v7_desc_fr,
               en: v7_desc_en
             })}
-            isCurrent={true}
+            isCurrent={false}
             />
             <LogCell
             version={pick({
