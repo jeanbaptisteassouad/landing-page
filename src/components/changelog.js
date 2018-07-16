@@ -277,8 +277,8 @@ export default function(props) {
               en: "v8 Hipster Hippo"
             })}
             date={pick({
-              fr: "13 juillet 2018",
-              en: "July 13 2018"
+              fr: "16 juillet 2018",
+              en: "July 16 2018"
             })}
             content={pick({
               fr: v8_desc_fr,
