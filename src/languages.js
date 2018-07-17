@@ -14,8 +14,9 @@ export default function(obj) {
       console.log({key})
       key = lang[i]
       console.log({key})
+      break
     }
-    break
+    // break
   }
 	console.log("fin")
   return obj[key]
