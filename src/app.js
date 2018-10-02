@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom'
 
 import Main from 'components/main'
 
-try {
-  navigator.serviceWorker.getRegistration()
-    .then(a=>a.unregister())
-} catch(e) {
-  
-}
 
 const app = () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      navigator.serviceWorker.getRegistration()
+        .then(a=>a.unregister())
+    } catch(e) {
+      
+    }
+  }
+
   let root_div = document.createElement('div')
   root_div.setAttribute('id','root')
 
