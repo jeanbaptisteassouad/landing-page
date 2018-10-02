@@ -5,19 +5,6 @@ import Main from 'components/main'
 
 
 const app = () => {
-  if ('serviceWorker' in navigator) {
-    try {
-      navigator.serviceWorker.getRegistration()
-        .then(a=>{
-          if (a) {
-            a.unregister()
-          }
-        })
-    } catch(e) {
-      
-    }
-  }
-
   let root_div = document.createElement('div')
   root_div.setAttribute('id','root')
 
