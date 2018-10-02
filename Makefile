@@ -37,9 +37,17 @@ cleanContainer:
 
 dist='./archifiltre.github.io'
 
-install: prod
+cloneAndCleanDist:
 	sudo rm -fr $(dist)
 	git clone git@github.com:archifiltre/archifiltre.github.io.git $(dist)
+	cd $(dist) && find . -maxdepth 1 \
+		-not -path '\.' \
+		-not -path '\./\.*' \
+		-not -path '\./README.md' \
+		-not -path '\./LICENSE' \
+		| xargs -I {} rm -fr {}
+
+install: prod cloneAndCleanDist
 	sudo docker run \
 		-d \
 		--name=$(image_name) \

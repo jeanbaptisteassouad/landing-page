@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom'
 
 import Main from 'components/main'
 
+try {
+  navigator.serviceWorker.getRegistration()
+    .then(a=>a.unregister())
+} catch(e) {
+  
+}
 
 const app = () => {
   let root_div = document.createElement('div')
