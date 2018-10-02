@@ -23,7 +23,7 @@ export default function CTA(props) {
   return (
     <div className='grid-x'>
       <div className='cell'>
-          <button style={button_style} onClick={() => window.location = 'https://archifiltre.github.io'}>
+          <button className={'button'} style={button_style} onClick={() => window.location = 'https://archifiltre.github.io/v8/'}>
             {button_text}
           </button>
       </div>
