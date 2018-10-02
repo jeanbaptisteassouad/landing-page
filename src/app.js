@@ -8,7 +8,11 @@ const app = () => {
   if ('serviceWorker' in navigator) {
     try {
       navigator.serviceWorker.getRegistration()
-        .then(a=>a.unregister())
+        .then(a=>{
+          if (a) {
+            a.unregister()
+          }
+        })
     } catch(e) {
       
     }
