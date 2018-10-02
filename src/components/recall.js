@@ -25,7 +25,7 @@ const cta_style = t_a_center.add({
 }).style()
 
 
-export default function(props) {
+export default function Recall(props) {
   return (
     <div className='grid-x' style={grid_style}>
       <div className='cell small-12'>

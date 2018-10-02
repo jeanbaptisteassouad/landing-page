@@ -38,7 +38,7 @@ const cta_subtitle_style = {
   marginTop: '0.3em'
 }
 
-export default function(props) {
+export default function HeroHeader(props) {
   return (
     <div className='grid-x'>
       <div className='cell small-12'>

@@ -23,7 +23,7 @@ const link_style = make({
 }).style()
 
 
-export default function(props) {
+export default function Footer(props) {
   return (
     <div className='grid-x'>
       <div className='cell auto'></div>

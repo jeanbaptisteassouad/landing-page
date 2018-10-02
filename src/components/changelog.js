@@ -264,7 +264,7 @@ const v1_desc_en = (
 <span>Archifiltre's first version is now live! Visualize a file tree at a single glance!</span>
 );
 
-export default function(props) {
+export default function ChangeLog(props) {
   return (
     <div style={root_style} id="changelog">
       <div className='grid-x grid-padding-y align-middle'>

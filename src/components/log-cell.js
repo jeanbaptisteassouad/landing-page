@@ -22,7 +22,7 @@ const current_version_text = pick({
 
 const current_version = (<span style={{color: '#08c37d'}}>• {current_version_text}</span>);
 
-export default function(props) {
+export default function LogCell(props) {
   let version = (props.isCurrent ? current_version : (<span></span>));
 
   return (

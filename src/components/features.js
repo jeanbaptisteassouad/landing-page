@@ -85,7 +85,7 @@ const title_style = h4.style()
 
 const para_style = p.style()
 
-export default function(props) {
+export default function Features(props) {
   return (
     <div style={root_style}>
       <div className='grid-x grid-padding-y align-middle'>

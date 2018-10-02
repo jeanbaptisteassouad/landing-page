@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import Main from 'components/main'
 
+
 const app = () => {
   let root_div = document.createElement('div')
   root_div.setAttribute('id','root')

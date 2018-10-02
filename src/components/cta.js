@@ -19,7 +19,7 @@ const button_style = {
   fontSize: '1em',
 }
 
-export default function(props) {
+export default function CTA(props) {
   return (
     <div className='grid-x'>
       <div className='cell'>
