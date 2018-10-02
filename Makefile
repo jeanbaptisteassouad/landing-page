@@ -35,12 +35,16 @@ cleanContainer:
 	sudo docker container prune -f
 
 
+dist='./archifiltre.github.io'
+
 install: prod
-	sudo rm -fr ./docs
+	sudo rm -fr $(dist)
+	git clone git@github.com:archifiltre/archifiltre.github.io.git $(dist)
 	sudo docker run \
 		-d \
 		--name=$(image_name) \
 		$(image_name):prod sh
-	sudo docker cp $(image_name):/usr/src/app/dist ./docs
+	sudo docker cp $(image_name):/usr/src/app/dist/. $(dist)
 	sudo docker container rm $(image_name)
-	sudo chmod -R 777 ./docs
+	sudo chmod -R 777 $(dist)
+	cd $(dist) && git add . && git commit -m 'commit' && git push
