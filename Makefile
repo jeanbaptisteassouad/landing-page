@@ -47,7 +47,7 @@ cloneAndCleanDist:
 		-not -path '\./LICENSE' \
 		| xargs -I {} rm -fr {}
 
-install: prod cloneAndCleanDist
+bundle: prod cloneAndCleanDist
 	sudo docker run \
 		-d \
 		--name=$(image_name) \
@@ -55,4 +55,6 @@ install: prod cloneAndCleanDist
 	sudo docker cp $(image_name):/usr/src/app/dist/. $(dist)
 	sudo docker container rm $(image_name)
 	sudo chmod -R 777 $(dist)
+
+install: bundle
 	cd $(dist) && git add . && git commit -m 'commit' && git push
