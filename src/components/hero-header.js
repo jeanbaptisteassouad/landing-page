@@ -21,44 +21,48 @@ const cta_style = t_a_center.add({
   padding: '0.5em'
 }).style()
 
-const version_text = pick({
-  fr:<span>version 8 Hipster Hippo</span>,
-  en:<span>version 8 Hipster Hippo</span>
-})
 
 const changelog_text = pick({
   fr:<span>Quoi de neuf ?</span>,
   en:<span>What's new?</span>
 })
 
-const changelog_link = "#changelog"
+export default class HeroHeader extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-const cta_subtitle_style = {
-  fontSize: '0.8em',
-  marginTop: '0.3em'
-}
+  render() {
+    const props = this.props
 
-export default function HeroHeader(props) {
-  return (
-    <div className='grid-x'>
-      <div className='cell small-12'>
-        <div style={title_style}>
-          archifiltre
+    const version_index = props.version_index
+    const setVersionIndex = props.setVersionIndex
+    const platform_index = props.platform_index
+    const setPlatformIndex = props.setPlatformIndex
+
+    return (
+      <div className='grid-x'>
+        <div className='cell small-12'>
+          <div style={title_style}>
+            archifiltre
+          </div>
+        </div>
+        <div className='cell small-12'>
+          <div style={sub_title_style}>
+            {sub_title_text}
+          </div>
+        </div>
+        <div className='cell small-12'>
+          <div style={cta_style}>
+            <CTA
+              version_index={version_index}
+              setVersionIndex={setVersionIndex}
+              platform_index={platform_index}
+              setPlatformIndex={setPlatformIndex}
+            />
+          </div>
         </div>
       </div>
-      <div className='cell small-12'>
-        <div style={sub_title_style}>
-          {sub_title_text}
-        </div>
-      </div>
-      <div className='cell small-12'>
-        <div style={cta_style}>
-          <CTA/>
-          <span style={cta_subtitle_style}>
-            {version_text} · <a href={changelog_link}>{changelog_text}</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  )
+    )
+  }
 }

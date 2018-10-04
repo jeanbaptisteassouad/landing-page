@@ -11,6 +11,8 @@ import { black_gradient } from 'css/cascade'
 
 import scrollHashIntoView from 'scroll-hash-into-view'
 
+import pick from 'languages'
+
 
 const folders_back_style = {
   background: 'url("imgs/stock-folders.jpg") no-repeat center'
@@ -31,7 +33,27 @@ export default class Main extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      version_index:0,
+      platform_index:0,
+    }
+
+    this.setVersionIndex = this.setVersionIndex.bind(this)
+    this.setPlatformIndex = this.setPlatformIndex.bind(this)
   }
+
+  setVersionIndex(version_index) {
+    this.setState({
+      version_index,
+    })
+  }
+
+  setPlatformIndex(platform_index) {
+    this.setState({
+      platform_index,
+    })
+  }
+
 
   componentDidMount() {
     const timeout = 10
@@ -39,11 +61,23 @@ export default class Main extends React.Component {
   }
 
   render() {
+    const state = this.state
+
+    const version_index = state.version_index
+    const setVersionIndex = this.setVersionIndex
+    const platform_index = state.platform_index
+    const setPlatformIndex = this.setPlatformIndex
+
     return (
       <div>
         <div className='grid-x grid-padding-x grid-padding-y'>
           <div className='cell small-12'>
-            <HeroHeader/>
+            <HeroHeader
+              version_index={version_index}
+              setVersionIndex={setVersionIndex}
+              platform_index={platform_index}
+              setPlatformIndex={setPlatformIndex}
+            />
           </div>
           <div className='cell small-12'>
             <Features/>
@@ -55,7 +89,12 @@ export default class Main extends React.Component {
             <div style={bg_style}>
               <div className='grid-x grid-padding-x grid-padding-y'>
                 <div className='cell'>
-                  <Recall/>
+                  <Recall
+                    version_index={version_index}
+                    setVersionIndex={setVersionIndex}
+                    platform_index={platform_index}
+                    setPlatformIndex={setPlatformIndex}
+                  />
                 </div>
               </div>
             </div>

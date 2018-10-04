@@ -26,6 +26,11 @@ const cta_style = t_a_center.add({
 
 
 export default function Recall(props) {
+  const version_index = props.version_index
+  const setVersionIndex = props.setVersionIndex
+  const platform_index = props.platform_index
+  const setPlatformIndex = props.setPlatformIndex
+
   return (
     <div className='grid-x' style={grid_style}>
       <div className='cell small-12'>
@@ -35,7 +40,12 @@ export default function Recall(props) {
       </div>
       <div className='cell small-12'>
         <div style={cta_style}>
-          <CTA/>
+          <CTA
+            version_index={version_index}
+            setVersionIndex={setVersionIndex}
+            platform_index={platform_index}
+            setPlatformIndex={setPlatformIndex}
+          />
         </div>
       </div>
     </div>
