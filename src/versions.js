@@ -2,11 +2,11 @@
 
 
 export default [
-  // {
-  //   number:9,
-  //   name:'Irrational Indoraptor',
-  //   url:'https://github.com/archifiltre/v9/releases/download/',
-  // },
+  {
+    number:9,
+    name:'Irrational Indoraptor',
+    url:'https://github.com/archifiltre/v9/releases/download/',
+  },
   {
     number:8,
     name:'Hipster Hippo',
