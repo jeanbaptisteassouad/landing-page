@@ -4,15 +4,11 @@
 export default [
   {
     name:'Windows 64 bit',
-    url_end:'windows64/archifiltre64.exe',
-  },
-  {
-    name:'Windows 32 bit',
-    url_end:'windows32/archifiltre32.exe',
+    url_end:'windows64/archifiltre.exe',
   },
   {
     name:'Linux 64 bit',
-    url_end:'linux64/archifiltre64.tar.gz',
+    url_end:'linux64/archifiltre.tar.gz',
   },
 ]
 
