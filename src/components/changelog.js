@@ -81,16 +81,41 @@ const log_cell_data = [
     content: pick({
       fr:
         <span>
-          L'application est maintenant <b>hors-ligne</b>, double cliquez sur l'executable pour lancer archifiltre sur votre ordinateur, c'est aussi simple que ça.<br /><br />
-          Si vos amis veulent essayer archifiltre, envoyez le par mail ou copiez le sur clef usb.<br />
-          Archifiltre est portable et se lance d'un simple click sur tout les ordinateurs, <b>pas besoin d'installation</b>.
+          ArchiFiltre prend une toute nouvelle direction ! Peu de choses ont changé dans cette nouvelle version, hormis une, très importante : 
+          <b>ArchiFiltre devient une application téléchargeable !</b><br /><br />Pourquoi ce choix ? Disons d'abord qu'il n'a pas été pris à la légère ; nous 
+          étions, depuis le début, très attachés à cette idée de fonctionner directement dans votre navigateur. C'était léger et universel. Nous ne 
+          l'aurions abandonné que pour quelque chose d'aussi, sinon plus, léger et universel, et c'est précisément ce qui s'est passé ici. 
+          Nous avions atteint un plafond de verre sur deux fronts.<br /><br /><b>La mémoire vive</b>, d'abord. Il y a une limite à la RAM que vous pouvez mobiliser 
+          dans un onglet de navigateur, et lorsque vous faites tourner une analyse de gros répertoire, vous pouvez vous y heurter. Ce ne sera plus le cas !<br /><br />
+          Ensuite, <b>la compatibilité</b>. On s'imagine la page web comme le document absolument universel, et en réalité, elle ne l'est pas tant que ça. 
+          Les navigateurs ne lisent pas tous le web de la même façon, et il peut même y avoir d'importantes différences d'une version à l'autre d'un navigateur. 
+          On nous a remonté régulièrement des versions de Chrome et Firefox incompatibles avec ArchiFiltre, sans parler bien sûr de nos utilisateurs qui 
+          utilisent Internet Explorer/Edge. Si vous êtes concerné.e, vous pourrez désormais utiliser ArchiFiltre !<br /><br />
+          Comme ce changement n'est pas anodin, nous avons fait en sorte qu'il soit le moins brutal possible. Déjà, la version 9, que vous allez découvrir, 
+          fonctionne exactement comme sa prédécesseure, au détail près qu'elle se lance comme une application de bureau plutôt que dans votre navigateur. Une 
+          fois dedans, tout devrait vous être familier. Ensuite, la version 8, ainsi que toutes celles d'avant, restent accessibles en ligne ! Si vous 
+          souhaitez continuer à l'utiliser, vous pouvez la sélectionner sur cette page. Simplement, elle ne connaîtra pas les futures versions d'ArchiFiltre, 
+          qui seront uniquement sous forme téléchargeable.<br /><br />
+          Plein de nouveautés sont en préparation dans ce nouveau format, alors tendez l'oreille, et comme toujours, n'hésitez pas à nous faire des retours !
         </span>
       ,
       en:
         <span>
-          The application is now <b>offline</b>, double click on the executable to launch archifiltre on your computer, it's as simple as that.<br /><br />
-          If your friends want to try archifiltre, send it by email or copy it on usb key.<br />
-          Archifiltre is portable and starts with a single click on all computers, <b>no need for installation</b>.
+          ArchiFiltre is taking an all new direction! Few things have changed in this update, except for one BIG thing : 
+          <b>ArchiFiltre is becoming a desktop app!</b><br /><br />Why this decision ? First off, let us say this wasn't easy ; from the start, we've 
+          loved this solution where the app runs in your browser. It was simple and universal, and we wouldn't have given up on it, save for something at least as  
+          simple and universal. Which is exactly what happened. We had reached a glass ceiling on two fronts.<br /><br />First, <b>memory</b>. 
+          There is a cap on the amount of RAM you can use in a browser tab, and when you're processing a large directory, you may run into it. But 
+          on desktop, no more!<br /><br /> Next, <b>compatibility</b>. One may think of a webpage as the ultimate universal document, but in reality, 
+          it isn't quite that. Browsers don't all read the web the same, and there can be major differences even across different versions of the same browser. 
+          We were told of a number of Chrome and Firefox versions that couldn't run ArchiFiltre, let alone of course our users running Internet Explorer/Edge. 
+          If that is your case, you will now be able to use ArchiFiltre!<br /><br />
+          Because this is no insignificant change, we've made it as smooth as possible. First off, version 9, which you're about to discover, looks and works 
+          exactly the same as its predecessor, except for the fact that you'll be launching it as a desktop app rather than in-browser. Once it's running, 
+          everything should be familiar to you. Then, version 8, as well as all the ones that came before, will remain available online! If you wish to keep 
+          using it, you can select it and access it from this page. It just won't undergo future updates to ArchiFiltre, which will only be released as 
+          standalone desktop apps.<br /><br />
+          We've got plenty of things cooking for future updates to this new format, so stya tuned, and as always, give us some feedback!
         </span>
       ,
     }),
