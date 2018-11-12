@@ -9,6 +9,9 @@ import versions from 'versions'
 import platforms from 'platforms'
 
 
+import Bubble from 'components/bubble'
+
+
 const button_style = {
   background: 'rgb(33, 150, 243)',
   color: 'rgb(255, 255, 255)',
@@ -90,19 +93,28 @@ export default function CTA(props) {
         </a>
       </div>
       <div className='cell small-12'>
-        <Select
-          index={version_index}
-          array={versions_text}
-          onChange={onChangeVersion}
-          style={select_style}
-        />
-        <Select
-          index={platform_index}
-          array={platforms_text}
-          onChange={onChangePlatform}
-          style={select_style}
-          disabled={platform_disabled}
-        />
+        <div className='grid-x align-center align-middle'>
+          <div className='cell shrink'>
+            <Select
+              index={version_index}
+              array={versions_text}
+              onChange={onChangeVersion}
+              style={select_style}
+            />
+          </div>
+          <div className='cell shrink'>
+            <Select
+              index={platform_index}
+              array={platforms_text}
+              onChange={onChangePlatform}
+              style={select_style}
+              disabled={platform_disabled}
+            />
+          </div>
+          <div className='cell shrink'>
+            <Bubble/>
+          </div>
+        </div>
       </div>
     </div>
   )
