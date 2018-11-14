@@ -3,6 +3,11 @@
 
 export default [
   {
+    number:10,
+    name:'Jazzy Jellyfish',
+    url:'https://github.com/archifiltre/v10/releases/download/',
+  },
+  {
     number:9,
     name:'Irrational Indoraptor',
     url:'https://github.com/archifiltre/v9/releases/download/',

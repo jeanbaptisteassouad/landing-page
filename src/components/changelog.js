@@ -73,6 +73,21 @@ const settings = {
 
 const log_cell_data = [
   {
+    number:10,
+    date: pick({
+      fr: '14 Novembre 2018',
+      en: 'November 14 2018',
+    }),
+    content: pick({
+      fr:
+        <span></span>
+      ,
+      en:
+        <span></span>
+      ,
+    }),
+  },
+  {
     number:9,
     date: pick({
       fr: '9 octobre 2018',
